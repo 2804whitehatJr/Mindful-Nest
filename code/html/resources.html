@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindful Nest - सजग बसेरा</title>
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../js/main.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/chat.js"></script>
+    <script src="../js/journal.js"></script>
+    <script src="../js/mood.js"></script>
+    <script src="../js/community.js"></script>
+    <script src="../js/modal.js"></script>
+    <script src="../js/animations.js"></script>
+</head>
+<body>
+    <!-- Mandala Background -->
+    <div class="mandala-bg"></div>
+
+     <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="max-w-6xl mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+
+                <!-- Logo -->
+                <a href="../index.html" class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center"
+                        style="background: linear-gradient(135deg, var(--saffron-muted), var(--maroon-soft));">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M12 2L12 22M2 12L22 12M4.93 4.93L19.07 19.07M19.07 4.93L4.93 19.07"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-lg font-semibold" style="color: var(--indigo-deep);">
+                            Mindful Nest
+                        </h1>
+                        <span class="text-xs" style="color: var(--text-muted);">
+                            रक्षा — भावनाओं का सुरक्षित घोंसला
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="nav-links hidden md:flex items-center gap-2">
+                    <a href="../index.html" class="nav-link">Home</a>
+                    <a href="chat.html" class="nav-link">Raksha Chat</a>
+                    <a href="journal.html" class="nav-link">Journal</a>
+                    <a href="mood.html" class="nav-link">Mood Tracker</a>
+                    <a href="community.html" class="nav-link">Community</a>
+                    <a href="resources.html" class="nav-link">Resources</a>
+                    <a href="about.html" class="nav-link">About</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn md:hidden p-2" onclick="toggleMobileMenu()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 12h18M3 6h18M3 18h18"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobileNav" class="mobile-nav hidden md:hidden mt-4 pb-2">
+                <div class="flex flex-wrap gap-2">
+                    <a href="../index.html" class="nav-link text-sm">Home</a>
+                    <a href="chat.html" class="nav-link text-sm">Chat</a>
+                    <a href="journal.html" class="nav-link text-sm">Journal</a>
+                    <a href="mood.html" class="nav-link text-sm">Mood</a>
+                    <a href="community.html" class="nav-link text-sm">Community</a>
+                    <a href="resources.html" class="nav-link text-sm">Resources</a>
+                    <a href="about.html" class="nav-link text-sm">About</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Main Content -->
+    <main class="relative z-10 min-h-screen pb-20">
+
+        <!-- RESOURCES PAGE -->
+        <div id="page-resources" class="page active">
+            <section class="max-w-4xl mx-auto px-4 py-8">
+                <div class="text-center mb-8">
+                    <h1 class="text-3xl font-bold mb-2" style="color: var(--indigo-deep);">Resources</h1>
+                    <p style="color: var(--text-muted);">Tools and information to support your journey.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Stress Coping -->
+                    <div class="card p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background: rgba(212, 132, 95, 0.2);">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--saffron-muted)" stroke-width="2">
+                                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold" style="color: var(--indigo-deep);">Managing Stress</h3>
+                        </div>
+                        <ul class="space-y-2 text-sm" style="color: var(--text-muted);">
+                            <li>Practice deep breathing for 5 minutes daily</li>
+                            <li>Break large tasks into smaller, manageable steps</li>
+                            <li>Set realistic expectations for yourself</li>
+                            <li>Take regular breaks during study sessions</li>
+                            <li>Talk to someone you trust about your pressures</li>
+                        </ul>
+                    </div>
+
+                    <!-- Family Conflict -->
+                    <div class="card p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background: rgba(139, 69, 87, 0.2);">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--maroon-soft)" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold" style="color: var(--indigo-deep);">Family Conflicts</h3>
+                        </div>
+                        <ul class="space-y-2 text-sm" style="color: var(--text-muted);">
+                            <li>Choose calm moments for difficult conversations</li>
+                            <li>Use "I" statements to express feelings</li>
+                            <li>Listen to understand, not to respond</li>
+                            <li>Accept that you can't control others' reactions</li>
+                            <li>Set healthy boundaries with kindness</li>
+                        </ul>
+                    </div>
+
+                    <!-- Study Pressure -->
+                    <div class="card p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background: rgba(26, 42, 74, 0.15);">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--indigo-deep)" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold" style="color: var(--indigo-deep);">Study Pressure</h3>
+                        </div>
+                        <ul class="space-y-2 text-sm" style="color: var(--text-muted);">
+                            <li>Your worth is not defined by grades alone</li>
+                            <li>Create a realistic study schedule with breaks</li>
+                            <li>Focus on progress, not perfection</li>
+                            <li>Seek help from teachers or peers when needed</li>
+                            <li>Remember: exams are a part, not the whole, of life</li>
+                        </ul>
+                    </div>
+
+                    <!-- Emotional Resilience -->
+                    <div class="card p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background: rgba(212, 132, 95, 0.2);">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--saffron-muted)" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold" style="color: var(--indigo-deep);">Building Resilience</h3>
+                        </div>
+                        <ul class="space-y-2 text-sm" style="color: var(--text-muted);">
+                            <li>Acknowledge your feelings without judgment</li>
+                            <li>Practice self-compassion daily</li>
+                            <li>Build a support network you can rely on</li>
+                            <li>Learn from setbacks, they are teachers</li>
+                            <li>Celebrate small wins along the way</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Crisis Resources -->
+                <div class="emergency-panel mt-8">
+                    <h3 class="text-2xl font-bold mb-4">If things feel overwhelming...</h3>
+                    <p class="mb-6">If you or someone you know needs immediate support, these helplines are available:</p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <p class="font-semibold">Kiran Mental Health Helpline</p>
+                            <a href="tel:18005990019" class="text-lg">1800-599-0019</a>
+                        </div>
+                        <div>
+                            <p class="font-semibold">iCall</p>
+                            <a href="tel:9152987821" class="text-lg">9152987821</a>
+                        </div>
+                        <div>
+                            <p class="font-semibold">AASRA</p>
+                            <a href="tel:+919820466726" class="text-lg">+91 9820466726</a>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Vandrevala Foundation</p>
+                            <a href="tel:18602662345" class="text-lg">1860-2662-345</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Shanti Button -->
+    <button class="shanti-btn" onclick="openShantiModal()" title="Need a moment of calm?">
+        Shanti
+    </button>
+
+    <!-- Shanti Modal -->
+    <div id="shantiModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4" style="background: rgba(26, 42, 74, 0.8);">
+        <div class="card p-8 max-w-md w-full text-center">
+            <h3 class="text-2xl font-semibold mb-4" style="color: var(--indigo-deep);">Take a Moment</h3>
+            <div class="mb-6">
+                <p class="italic text-lg mb-4" style="color: var(--text-muted);">"Om Shanti Shanti Shanti"</p>
+                <p style="color: var(--text-muted);">Peace within, peace around, peace throughout.</p>
+            </div>
+            <div class="mb-6">
+                <button class="btn-primary w-full mb-3" onclick="quickBreathing()">Quick Breathing Exercise</button>
+                <button class="btn-secondary w-full" onclick="quickGrounding()">Ground Me Now</button>
+            </div>
+            <button class="text-sm" style="color: var(--text-muted);" onclick="closeShantiModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="font-medium mb-1">This platform provides emotional reflection tools. It does not diagnose, treat, or replace professional therapy.</p>
+        <p>Mindful Nest - सजग बसेरा | Made with care in India</p>
+    </footer>
+
+    
+</body>
+</html> 
